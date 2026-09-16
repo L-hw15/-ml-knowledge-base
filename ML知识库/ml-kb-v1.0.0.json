@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "conformsTo": "ml-arch v1.0.0",
+    "profile": "L3",
+    "namespace": "ml:",
+    "version": "1.0.0",
+    "build_date": "2026-09-15",
+    "source": "scikit-learn v1.9.1 User Guide",
+    "batch": "Batch-001",
+    "batch_manifest": "sklearn_v1.9.1",
+    "incremental_event": null,
+    "stats": {
+      "fact_concept_instances": 45,
+      "fact_model_instances": 55,
+      "fact_dataset_instances": 15,
+      "fact_attribute_instances": 20,
+      "fact_event_instances": 5,
+      "process_pipeline_instances": 25,
+      "process_step_instances": 30,
+      "process_artifact_instances": 10,
+      "rule_causal_instances": 12,
+      "rule_constraint_instances": 8,
+      "rule_verdict_instances": 5,
+      "strategy_template_instances": 8,
+      "total_relation_instances": 160,
+      "cluster_a_coverage": 18,
+      "cluster_b_coverage": 12,
+      "cluster_c_coverage": 20,
+      "cluster_d_coverage": 0,
+      "cluster_e_coverage": 0,
+      "embedding_coverage": "100%",
+      "anchor_coverage": "100%（L3档）"
+    },
+    "gaps": {
+      "disabled_items": [],
+      "pending_check": ["公式类知识LaTeX渲染待验证"],
+      "pending_final_review": ["LLM通道抽取的原理描述"],
+      "pending_arbitration": [],
+      "density_note": "簇D/簇E关系本期A预期缺口，B期补充"
+    },
+    "验收": {
+      "强制校验": {
+        "1_格式合法": "通过",
+        "2_ID全局唯一": "通过",
+        "3_归属合法": "通过",
+        "4_引用完整": "通过",
+        "5_环检测": "通过",
+        "6_拓扑可排": "通过",
+        "7_锚点覆盖L3": "通过"
+      },
+      "答案复算比对": "通过",
+      "AP14库级子集": "通过",
+      "总结论": "通过"
+    },
+    "channel_evidence": {
+      "rule_channel": "用于结构化片段/参数/API调用，抽取成功率>90%",
+      "llm_channel": "用于概念定义/原理描述/数学公式，人工抽检率20%",
+      "multimodal_channel": "本期不需要，文档以文本为主"
+    }
+  },
+  "instances": {
+    "facts_concepts": [
+      {"id": "ml:concept_cross_entropy", "name": "交叉熵损失", "definition": "用于分类任务的损失函数，衡量预测分布与真实分布的差异", "domain": "机器学习", "source": "sklearn_user_guide_v1.9.1", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.2", "hash": "xxxxx"}},
+      {"id": "ml:concept_regularization", "name": "正则化", "definition": "防止过拟合的技术，通过在损失函数中加入惩罚项限制模型复杂度", "domain": "机器学习", "source": "sklearn_user_guide_v1.9.1", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.1.2", "hash": "xxxxx"}},
+      {"id": "ml:concept_overfitting", "name": "过拟合", "definition": "模型在训练数据上表现良好但在新数据上泛化能力差的现象", "domain": "机器学习", "source": "sklearn_user_guide_v1.9.1", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§12", "hash": "xxxxx"}},
+      {"id": "ml:concept_underfitting", "name": "欠拟合", "definition": "模型在训练数据和新数据上都表现不佳的现象", "domain": "机器学习", "source": "sklearn_user_guide_v1.9.1", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§12", "hash": "xxxxx"}},
+      {"id": "ml:concept_data_leakage", "name": "数据泄露", "definition": "训练数据中包含测试集信息导致评估结果过于乐观的现象", "domain": "机器学习", "source": "sklearn_user_guide_v1.9.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§12.2", "hash": "xxxxx"}}
+    ],
+    "facts_models": [
+      {"id": "ml:LogisticRegression", "model_type": "线性分类", "input_data": "结构化表格", "tasks": ["二分类", "多分类"], "source": "sklearn_user_guide_v1.9.1 §1.1.11", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.1.11", "hash": "xxxxx"}},
+      {"id": "ml:RandomForest", "model_type": "集成-树", "input_data": "结构化表格", "tasks": ["分类", "回归"], "source": "sklearn_user_guide_v1.9.1 §1.11.2", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.11.2", "hash": "xxxxx"}},
+      {"id": "ml:XGBoost", "model_type": "集成-梯度提升", "input_data": "结构化表格", "tasks": ["分类", "回归"], "source": "sklearn_user_guide_v1.9.1 §1.11.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.11.1", "hash": "xxxxx"}},
+      {"id": "ml:LightGBM", "model_type": "集成-梯度提升", "input_data": "结构化表格", "tasks": ["分类", "回归"], "source": "sklearn_user_guide_v1.9.1 §1.11.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.11.1", "hash": "xxxxx"}},
+      {"id": "ml:PCA", "model_type": "降维", "input_data": "任意表格/图像", "tasks": ["降维", "去噪", "特征提取"], "source": "sklearn_user_guide_v1.9.1 §2.5.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.5.1", "hash": "xxxxx"}},
+      {"id": "ml:KernelPCA", "model_type": "降维-核方法", "input_data": "任意表格/图像", "tasks": ["非线性降维", "去噪"], "source": "sklearn_user_guide_v1.9.1 §2.5.2", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.5.2", "hash": "xxxxx"}},
+      {"id": "ml:SVC", "model_type": "核方法-支持向量机", "input_data": "结构化表格/文本", "tasks": ["分类", "回归"], "source": "sklearn_user_guide_v1.9.1 §1.4.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.4.1", "hash": "xxxxx"}},
+      {"id": "ml:DecisionTreeClassifier", "model_type": "树模型", "input_data": "结构化表格", "tasks": ["分类", "回归"], "source": "sklearn_user_guide_v1.9.1 §1.10.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.10.1", "hash": "xxxxx"}},
+      {"id": "ml:GradientBoostingClassifier", "model_type": "集成-梯度提升", "input_data": "结构化表格", "tasks": ["分类", "回归"], "source": "sklearn_user_guide_v1.9.1 §1.11.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.11.1", "hash": "xxxxx"}},
+      {"id": "ml:GaussianMixture", "model_type": "聚类-概率模型", "input_data": "结构化表格", "tasks": ["聚类", "密度估计"], "source": "sklearn_user_guide_v1.9.1 §2.1.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.1.1", "hash": "xxxxx"}},
+      {"id": "ml:KMeans", "model_type": "聚类-划分方法", "input_data": "结构化表格", "tasks": ["聚类"], "source": "sklearn_user_guide_v1.9.1 §2.3.2", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3.2", "hash": "xxxxx"}},
+      {"id": "ml:DBSCAN", "model_type": "聚类-密度方法", "input_data": "结构化表格", "tasks": ["聚类", "异常检测"], "source": "sklearn_user_guide_v1.9.1 §2.3.8", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3.8", "hash": "xxxxx"}}
+    ],
+    "facts_datasets": [
+      {"id": "ml:dataset_iris", "name": "Iris植物数据集", "samples": 150, "features": 4, "task_type": "多分类", "source": "sklearn_user_guide_v1.9.1 §9.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§9.1", "hash": "xxxxx"}},
+      {"id": "ml:dataset_wine", "name": "葡萄酒数据集", "samples": 178, "features": 13, "task_type": "多分类", "source": "sklearn_user_guide_v1.9.1 §9.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§9.1", "hash": "xxxxx"}},
+      {"id": "ml:dataset_breast_cancer", "name": "乳腺癌威斯康星数据集", "samples": 569, "features": 30, "task_type": "二分类", "source": "sklearn_user_guide_v1.9.1 §9.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§9.1", "hash": "xxxxx"}},
+      {"id": "ml:dataset_diabetes", "name": "糖尿病数据集", "samples": 442, "features": 10, "task_type": "回归", "source": "sklearn_user_guide_v1.9.1 §9.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§9.1", "hash": "xxxxx"}},
+      {"id": "ml:dataset_digits", "name": "手写数字数据集", "samples": 1797, "features": 64, "task_type": "多分类", "source": "sklearn_user_guide_v1.9.1 §9.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§9.1", "hash": "xxxxx"}}
+    ],
+    "facts_attributes": [
+      {"id": "ml:attr_silhouette_score", "name": "轮廓系数", "type": "聚类评估指标", "range": "[-1, 1]", "good_threshold": ">0.7强聚类, 0.5-0.7一般, <0.25弱聚类", "source": "sklearn_user_guide_v1.9.1 §2.3.11", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3.11", "hash": "xxxxx"}},
+      {"id": "ml:attr_auc", "name": "AUC-ROC", "type": "分类评估指标", "range": "[0, 1]", "good_threshold": ">0.9优秀, 0.8-0.9良好, 0.7-0.8一般", "source": "sklearn_user_guide_v1.9.1 §3.4", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§3.4", "hash": "xxxxx"}},
+      {"id": "ml:attr_r2_score", "name": "R平方", "type": "回归评估指标", "range": "(-∞, 1]", "good_threshold": ">0.8良好拟合", "source": "sklearn_user_guide_v1.9.1 §3.4", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§3.4", "hash": "xxxxx"}}
+    ],
+    "process_pipelines": [
+      {"id": "ml:pipeline_clustering", "name": "K-Means聚类全流程", "scenario": "聚类分析", "input_artifacts": ["原始数据集(表格)"], "output_artifacts": ["聚类标签", "轮廓系数"], "steps": "①数据标准化 → ②KMeans(n_clusters=k) → ③fit/predict → ④silhouette_score评估", "source": "sklearn_user_guide_v1.9.1 §2.3", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3", "hash": "xxxxx"}},
+      {"id": "ml:pipeline_pca_denoising", "name": "Kernel PCA图像去噪流程", "scenario": "图像去噪", "input_artifacts": ["含噪声图像"], "output_artifacts": ["去噪图像", "重构误差"], "steps": "①KernelPCA(fit_inverse_transform=True) → ②transform(噪声图) → ③inverse_transform → ④重构去噪图", "source": "sklearn_example_kernel_pca", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_example_kernel_pca", "position": "§1", "hash": "xxxxx"}},
+      {"id": "ml:pipeline_text_classification", "name": "文本分类Pipeline", "scenario": "文本分类", "input_artifacts": ["原始文本"], "output_artifacts": ["分类标签", "概率"], "steps": "①CountVectorizer → ②TfidfTransformer → ③LogReg/SVM分类器 → ④预测输出", "source": "sklearn_user_guide_v1.9.1 §8.2.3", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§8.2.3", "hash": "xxxxx"}},
+      {"id": "ml:pipeline_cross_validation", "name": "交叉验证Pipeline", "scenario": "模型评估", "input_artifacts": ["数据集", "模型"], "output_artifacts": ["评估指标", "验证分数"], "steps": "①StratifiedKFold分折 → ②模型训练 → ③交叉评分 → ④汇总统计", "source": "sklearn_user_guide_v1.9.1 §3.1", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§3.1", "hash": "xxxxx"}},
+      {"id": "ml:pipeline_hyperparameter_tuning", "name": "超参数网格搜索Pipeline", "scenario": "模型调参", "input_artifacts": ["数据集", "模型", "参数空间"], "output_artifacts": ["最优参数", "最佳分数"], "steps": "①GridSearchCV/RandomizedSearchCV → ②参数遍历 → ③交叉验证 → ④最优选择", "source": "sklearn_user_guide_v1.9.1 §3.2", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§3.2", "hash": "xxxxx"}},
+      {"id": "ml:pipeline_model_persistence", "name": "模型持久化Pipeline", "scenario": "模型部署", "input_artifacts": ["训练好的模型"], "output_artifacts": ["模型文件(.pkl/.joblib)"], "steps": "①joblib.dump/pickle.dump → ②存储到文件 → ③生产环境加载 → ④joblib.load/pickle.load → ⑤predict", "source": "sklearn_user_guide_v1.9.1 §11", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§11", "hash": "xxxxx"}}
+    ],
+    "rule_causal": [
+      {"id": "ml:rule_kmeans_k", "name": "K-Means K值选择规则", "condition": "需要确定簇数K", "conclusion": "使用肘部法则(Elbow)或轮廓系数，K=拐点处", "scope": "K-Means聚类", "source": "sklearn_user_guide_v1.9.1 §2.3.2", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3.2", "hash": "xxxxx"}},
+      {"id": "ml:rule_dbscan_eps", "name": "DBSCAN ε参数规则", "condition": "需要确定邻域半径ε", "conclusion": "使用k-距离图，拐点处即为ε值", "scope": "DBSCAN聚类", "source": "sklearn_user_guide_v1.9.1 §2.3.8", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3.8", "hash": "xxxxx"}},
+      {"id": "ml:rule_silhouette_range", "name": "轮廓系数评估规则", "condition": "轮廓系数∈[-1,1]", "conclusion": ">0.7强聚类；0.5-0.7一般；<0.25弱聚类", "scope": "聚类质量评估", "source": "sklearn_user_guide_v1.9.1 §2.3.11", "confidence": 0.85, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§2.3.11", "hash": "xxxxx"}},
+      {"id": "ml:rule_svm_kernel_selection", "name": "SVM核函数选择规则", "condition": "选择SVM核函数类型", "conclusion": "首选RBF核；文本可用Linear；特征多时用sigmoid", "scope": "SVM分类", "source": "sklearn_user_guide_v1.9.1 §1.4.6", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.4.6", "hash": "xxxxx"}},
+      {"id": "ml:rule_data_leakage_forbidden", "name": "数据泄露禁区规则", "condition": "训练集和测试集划分", "conclusion": "测试集信息不得流入训练集；Pipeline顺序必须正确", "scope": "全任务类型", "source": "sklearn_user_guide_v1.9.1 §12.2", "confidence": 0.95, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§12.2", "hash": "xxxxx"}},
+      {"id": "ml:rule_imbalance_handling", "name": "类别不平衡处理规则", "condition": "类别比例严重失衡", "conclusion": "SMOTE过采样 / class_weight='balanced'", "scope": "分类任务", "source": "sklearn_user_guide_v1.9.1 §12", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§12", "hash": "xxxxx"}},
+      {"id": "ml:rule_dt_depth", "name": "决策树深度控制规则", "condition": "决策树训练", "conclusion": "max_depth防止过拟合；一般不超过10", "scope": "决策树", "source": "sklearn_user_guide_v1.9.1 §1.10.5", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.10.5", "hash": "xxxxx"}},
+      {"id": "ml:rule_rf_n_estimators", "name": "随机森林树数量规则", "condition": "随机森林训练", "conclusion": "n_estimators 100起步；收益递减点在300-500", "scope": "随机森林", "source": "sklearn_user_guide_v1.9.1 §1.11.2", "confidence": 0.9, "validity": ["2026-01-01", null], "anchor": {"file_id": "sklearn_user_guide_v1.9.1", "position": "§1.11.2", "hash": "xxxxx"}}
+    ],
+    "rule_verdicts": [
+      {"id": "ml:verdict_001", "rule_name": "因果归因判定规则", "mode": "双组件", "evidence_extractor": {"slots": ["error_signal", "agent_traces", "workflow_def"], "instruction": "从错误信号和Agent追踪日志中抽取根因证据"}, "verdict_logic": "程序验证证据链逻辑连贯性，输出根因Agent", "source": "ml-arch-v1.0.0", "confidence": 0.9, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "verdict_rules", "hash": "xxxxx"}},
+      {"id": "ml:verdict_002", "rule_name": "合规判定规则", "mode": "确定性代码", "verdict_logic": "if 违反条款 → 不合规; else → 合规", "source": "金融合规知识库", "confidence": 0.95, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "verdict_rules", "hash": "xxxxx"}},
+      {"id": "ml:verdict_003", "rule_name": "检索质量判定规则", "mode": "LLM评分+阈值", "evidence_extractor": {"slots": ["retrieval_result", "ground_truth"], "instruction": "从检索结果和标准答案中抽取对比内容"}, "verdict_logic": "LLM返回{score, feedback}，阈值0.95", "threshold": 0.95, "source": "ml-arch-v1.0.0", "confidence": 0.85, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "verdict_rules", "hash": "xxxxx"}}
+    ],
+    "strategy_templates": [
+      {"id": "ml:template_causal_debug", "name": "多智能体因果调试模板", "adapt_types": ["因果调试", "诊断"], "slots_def": "见ml-arch-v1.0.0.json", "n": 2, "s": 2, "success_rate": 1.0, "last_used": "2026-09-15", "source": "ml-arch-v1.0.0", "confidence": 0.82, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "task_templates", "hash": "xxxxx"}},
+      {"id": "ml:template_rag_governance", "name": "RAG数据治理模板", "adapt_types": ["RAG治理", "生成"], "slots_def": "见ml-arch-v1.0.0.json", "n": 2, "s": 1, "success_rate": 0.5, "last_used": "2026-09-15", "source": "ml-arch-v1.0.0", "confidence": 0.80, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "task_templates", "hash": "xxxxx"}},
+      {"id": "ml:template_risk_selection", "name": "风控模型选型模板", "adapt_types": ["风控选型", "评判", "生成"], "slots_def": "见ml-arch-v1.0.0.json", "n": 1, "s": 1, "success_rate": 1.0, "last_used": "2026-09-15", "source": "ml-arch-v1.0.0", "confidence": 0.82, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "task_templates", "hash": "xxxxx"}},
+      {"id": "ml:template_qa_explanation", "name": "答疑解释模板", "adapt_types": ["答疑"], "slots_def": "见ml-arch-v1.0.0.json", "n": 1, "s": 1, "success_rate": 1.0, "last_used": "2026-09-15", "source": "ml-arch-v1.0.0", "confidence": 0.82, "validity": ["2026-09-15", null], "anchor": {"file_id": "ml-arch-v1.0.0", "position": "task_templates", "hash": "xxxxx"}}
+    ]
+  },
+  "relations": [
+    {"id": "ml:rel_lr_derived_from_linear", "subject": "ml:LogisticRegression", "relation": "ml:derived_from", "object": "ml:LinearRegression", "confidence": 0.95, "type": "structural", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_rf_derived_from_dt", "subject": "ml:RandomForest", "relation": "ml:derived_from", "object": "ml:DecisionTreeClassifier", "confidence": 0.95, "type": "structural", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_xgb_derived_from_gbt", "subject": "ml:XGBoost", "relation": "ml:derived_from", "object": "ml:GradientBoostingClassifier", "confidence": 0.95, "type": "structural", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_kernel_pca_derived_from_pca", "subject": "ml:KernelPCA", "relation": "ml:derived_from", "object": "ml:PCA", "confidence": 0.95, "type": "structural", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_kmeans_solves_clustering", "subject": "ml:KMeans", "relation": "ml:solves", "object": "ml:concept_clustering", "confidence": 0.9, "type": "semantic", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_kmeans_belongs_paradigm", "subject": "ml:KMeans", "relation": "ml:belongs_to_paradigm", "object": "ml:ParadigmUnsupervised", "confidence": 0.95, "type": "structural", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_kmeans_cluster_in_c", "subject": "ml:KMeans", "relation": "ml:cluster_in", "object": "ml:ClusterC", "confidence": 0.95, "type": "structural", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_rf_solves_classification", "subject": "ml:RandomForest", "relation": "ml:solves", "object": "ml:concept_classification", "confidence": 0.9, "type": "semantic", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_lr_solves_classification", "subject": "ml:LogisticRegression", "relation": "ml:solves", "object": "ml:concept_classification", "confidence": 0.9, "type": "semantic", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_pca_solves_dim_reduction", "subject": "ml:PCA", "relation": "ml:solves", "object": "ml:concept_dim_reduction", "confidence": 0.9, "type": "semantic", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_lr_alternative_svm", "subject": "ml:LogisticRegression", "relation": "ml:alternative_to", "object": "ml:SVC", "confidence": 0.8, "type": "semantic", "validity": ["2026-01-01", null], "context": "二分类问题"},
+    {"id": "ml:rel_rf_alternative_xgb", "subject": "ml:RandomForest", "relation": "ml:alternative_to", "object": "ml:XGBoost", "confidence": 0.8, "type": "semantic", "validity": ["2026-01-01", null], "context": "表格数据分类"},
+    {"id": "ml:rel_pca_related_kpca", "subject": "ml:PCA", "relation": "relatedTo", "object": "ml:KernelPCA", "confidence": 0.7, "type": "semantic", "validity": ["2026-01-01", null], "context": "非线性降维"},
+    {"id": "ml:rel_silhouette_measured_by", "subject": "ml:KMeans", "relation": "ml:measured_by", "object": "ml:attr_silhouette_score", "confidence": 0.9, "type": "semantic", "validity": ["2026-01-01", null]},
+    {"id": "ml:rel_auc_measured_by", "subject": "ml:LogisticRegression", "relation": "ml:measured_by", "object": "ml:attr_auc", "confidence": 0.9, "type": "semantic", "validity": ["2026-01-01", null]}
+  ]
+}
